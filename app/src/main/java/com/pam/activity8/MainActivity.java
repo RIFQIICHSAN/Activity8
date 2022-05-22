@@ -66,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void BacaData(){
+        temanArrayList.clear();
 
         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
 
@@ -90,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
                 }
+                adapter.notifyDataSetChanged();
             }
         }, new Response.ErrorListener() {
             @Override
